@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: TrustCloud - TrustCard Widget
-Plugin URI: trustcloud.com/trustcard-widget-for-wordpress 
+Plugin URI: http://trustcloud.com/trustcard-widget-for-wordpress
 Description: Adds a TrustCard to your Wordpress Widgets for easy addition to your site.
 Version: 0.5
 Author: TrustCloud
