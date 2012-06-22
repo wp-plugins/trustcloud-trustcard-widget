@@ -30,9 +30,9 @@ function control_trustcard() {
         $options['title'] = htmlspecialchars($_POST['trustcard-widget-title']);
         $options['input'] = htmlspecialchars($_POST['trustcard-widget-input']);
         $options['type'] = 'email';
-        if (preg_match('/^[A-Za-z0-9_]+$/', $options['input']) {
+        if (preg_match('/^[A-Za-z0-9_]+$/', $options['input'])) {
             $options['type'] = 'membername';
-        } else if (preg_match('/^@/', $options['input']) {
+        } else if (preg_match('/^@/', $options['input'])) {
             $options['type'] = 'twitter';
         }
         update_option('widget_trustcard', $options);
