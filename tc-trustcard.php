@@ -28,15 +28,23 @@ function control_trustcard() {
     }
         if ($_POST['trustcard-submit']) {
         $options['title'] = htmlspecialchars($_POST['trustcard-widget-title']);
-        $options['input'] = preg_replace('/^@/', '', htmlspecialchars($_POST['trustcard-widget-input']));
-        $options['type'] = preg_match('/^[A-Za-z0-9_]+$/', $options['input']) ? 'twitter' : 'email';
+        $options['input'] = htmlspecialchars($_POST['trustcard-widget-input']);
+        $options['type'] = 'email';
+        if (preg_match('/^[A-Za-z0-9_]+$/', $options['input']) {
+            $options['type'] = 'membername';
+        } else if (preg_match('/^@/', $options['input']) {
+            $options['type'] = 'twitter';
+        }
         update_option('widget_trustcard', $options);
     }
 ?>
     <label for="trustcard-widget-title">Widget Title:</label>
     <input type="text" id="trustcard-widget-title" name="trustcard-widget-title" value="<?php echo $options['title'] ?>" style="width:225px" />
-    <label for="trustcard-widget-input">Twitter handle or email:</label>
-    <input type="text" id="trustcard-widget-input" name="trustcard-widget-input" value="<?php echo $options['input'] ?>" style="width:225px" />
+    <br>
+    <label for="trustcard-widget-input">Username, @Twitter, or email:</label>
+    <input type="text" id="trustcard-widget-input" name="trustcard-widget-input" value="<?php echo $options['input'] ?>" placeholder="username, @Twitter, or email@example.com" style="width:225px" />
+    <p>Input your TrustCloud username ("trustcloud"), Twitter ("@trustcloud"), or email ("tom@trustcloud.com")</p>
+
     <input type="hidden" id="trustcard-submit" name="trustcard-submit" value="1" />
 <?php
 }
