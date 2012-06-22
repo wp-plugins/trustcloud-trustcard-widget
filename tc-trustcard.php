@@ -40,10 +40,11 @@ function control_trustcard() {
 ?>
     <label for="trustcard-widget-title">Widget Title:</label>
     <input type="text" id="trustcard-widget-title" name="trustcard-widget-title" value="<?php echo $options['title'] ?>" style="width:225px" />
-    <br>
+    <br><br>
     <label for="trustcard-widget-input">Username, @Twitter, or email:</label>
-    <input type="text" id="trustcard-widget-input" name="trustcard-widget-input" value="<?php echo $options['input'] ?>" placeholder="username, @Twitter, or email@example.com" style="width:225px" />
-    <p>Input your TrustCloud username ("trustcloud"), Twitter ("@trustcloud"), or email ("tom@trustcloud.com")</p>
+    <input type="text" id="trustcard-widget-input" name="trustcard-widget-input" value="<?php echo $options['input'] ?>" style="width:225px" />
+    <br><br>
+    <p>TrustCloud username ("trustcloud"),<br>Twitter ("@trustcloud")<br>or email ("tom@trustcloud.com")</p>
 
     <input type="hidden" id="trustcard-submit" name="trustcard-submit" value="1" />
 <?php
