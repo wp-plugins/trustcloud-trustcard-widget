@@ -3,7 +3,7 @@ Contributors: trustcloud
 Tags: trustcloud, trustcard, trust, widget, sharing economy, collaborative consumption
 Requires at least: 2.0.2
 Tested up to: 3.3.2
-Stable tag: 0.51
+Stable tag: 0.52
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -32,3 +32,6 @@ The TrustCard Wordpress Widget is the simplest way to integrate your TrustCard i
 
 = 0.5 =
 * Beta release
+
+= 0.52 =
+* Added support for TrustCloud member name lookups
