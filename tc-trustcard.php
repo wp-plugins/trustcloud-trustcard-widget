@@ -15,7 +15,7 @@ function widget_trustcard($args) {
     echo $before_widget;
     echo $before_title . $options['title'] . $after_title;
     echo '<style> .tc-trustcard { margin: 0 auto; } </style>';
-    echo '<script type="text/javascript" src="https://api.trustcloud.com/display/showidcard?userid=' . $options['type'] . '-' . $options['input'] . '" ></script>';
+    echo '<script type="text/javascript" src="https://api.trustcloud.com/display/showidcard?userid=' . $options['type'] . '-' . ($options['type'] == 'twitter' ? preg_replace('/^@/', '', $options['input']) : $options['input']) . '" ></script>';
     echo $after_widget;
 }
 
@@ -33,7 +33,6 @@ function control_trustcard() {
         if (preg_match('/^[A-Za-z0-9_]+$/', $options['input'])) {
             $options['type'] = 'membername';
         } else if (preg_match('/^@/', $options['input'])) {
-            $options['input'] = preg_replace('/^@/', '', $options['input']);
             $options['type'] = 'twitter';
         }
         update_option('widget_trustcard', $options);
