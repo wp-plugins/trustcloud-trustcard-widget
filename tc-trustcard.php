@@ -15,7 +15,7 @@ function widget_trustcard($args) {
     echo $before_widget;
     echo $before_title . $options['title'] . $after_title;
     echo '<style> .tc-trustcard { margin: 0 auto; } </style>';
-    echo '<script type="text/javascript" src="https://api.trustcloud.com/display/showidcard?userid=' . $options['type'] . '-' . ($options['type'] == 'twitter' ? preg_replace('/^@/', '', $options['input']) : $options['input']) . '" ></script>';
+    echo '<script data-cfasync="false" type="text/javascript" src="https://api.trustcloud.com/display/showidcard?userid=' . $options['type'] . '-' . ($options['type'] == 'twitter' ? preg_replace('/^@/', '', $options['input']) : $options['input']) . '" ></script>';
     echo $after_widget;
 }
 
