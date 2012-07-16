@@ -22,7 +22,7 @@ The TrustCard Wordpress Widget is the simplest way to integrate your TrustCard i
 
 == Frequently Asked Questions ==
 
- 
+
 == Screenshots ==
 
 1. A sample TrustCard and it's features.
@@ -35,3 +35,6 @@ The TrustCard Wordpress Widget is the simplest way to integrate your TrustCard i
 
 = 0.52 =
 * Added support for TrustCloud member name lookups
+
+= 0.53 =
+* Added support for CloudFlare-enabled sites
